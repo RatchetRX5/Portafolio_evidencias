@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Práctica 1</title>
+	<style type="text/css">
+		td{
+			align-content: center;
+			width: 33%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Venta en línea</h1>
+	<form>
+		<fieldset>		
+			<legend>Información general</legend>
+			<table width="100%">
+				<tr>
+					<td>
+						<label for="nombre">Nombre:</label>
+						<br>
+						<input type="text" name="nombre" id="nombre" maxlength="25" size="20" placeholder="Nombre" title="Nombre">
+			
+					</td>
+					<td>
+						<label for="apellidoP">Apellido paterno:</label>
+						<br>
+						<input type="text" name="apellidoP" id="apellidoP" maxlength="25" size="20" placeholder="Apelido Paterno" title="Apellido paterno">
+					</td>
+					<td>
+						<label for="apellidoP">Apellido materno:</label>
+						<br>
+						<input type="text" name="apellidoM" id="apellidoM" maxlength="25" size="20" placeholder="Apelido Materno" title="Apellido materno">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="nombre">Nombre de usuario:</label>
+						<br>
+						<input type="text" name="user" id="user" maxlength="25" size="20" placeholder="Nombre" title="Nombre de usuario">
+			
+					</td>
+					<td>
+						<label>Contraseña:</label>
+						<br>
+						<input type="password" name="pass" id="pass" maxlength="25" size="20" placeholder="Contraseña" title="Contraseña" required>
+					</td>
+					<td>
+						<label for="fechan">Fecha de nacimiento:</label>
+						<br>
+						<input type="date" name="fechan" id="fechan">
+					</td>
+				</tr>
+			</table>	
+			
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos de facturación</legend>
+			<table width="100%">
+				<tr>
+					<td>
+						<label for="pais">País</label>
+						<br>
+						<select name="pais" id="pais" multiple size="4">
+							<option>México</option>
+							<option>Canadá</option>
+							<option>E.U.A.</option>
+							<option>Alemania</option>
+							<option>Rusia</option>
+							<option>China</option>
+							<option>Francia</option>
+						</select>
+					</td>
+					<td>
+						<label for="city">Ciudad</label>
+						<br>
+						<select name="city" id="city" multiple size="4">
+							<option>San Luis Potosí</option>
+							<option>Guadalajara</option>
+							<option>Guanajuato</option>
+							<option>Morelia</option>
+							<option>Matamoros</option>
+							<option>Mazatlan</option>
+							<option>Ciudad de México</option>
+							<option>Ciudad Juárez</option>
+							<option>Colima</option>
+						</select>
+					</td>
+					<td>
+						<label for="calle">Calle</label>
+						<br>
+						<input type="text" name="calle" id="calle" maxlength="25" size="20" placeholder="Calle" title="Calle">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="nocasa">Numero de casa</label>
+						<br>
+						<input type="number" name="nocasa" id="nocasa" maxlength="25" size="20" placeholder="Numero Exterior" title="Numero de casa">
+					</td>
+					<td>
+						<label>Colonia</label>
+						<br>
+						<input type="text" name="col" id="col"  maxlength="25" size="20" placeholder="Colonia" title="Colonia">
+					</td>
+					<td>
+						<label for="e-mail">E-mail</label>
+						<br>
+						<input type="text" name="e-mail" id="e-mail"  maxlength="25" size="20" placeholder="E-mail" title="Correo Electronico">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="rfc">R.F.C.</label>
+						<br>
+						<input type="text" name="rfc" id="rfc"  maxlength="25" size="20" placeholder="R.F.C." title="R.F.C.">
+					</td>
+					<td>
+						<label for="cp">C.P.</label>
+						<br>
+						<input type="number" name="cp" id="cp"  maxlength="25" size="20" placeholder="Código Postal" title="Código Postal">
+					</td>
+					<td>
+						<input type="submit" name="envio" id="envio" value="Enviar">
+						<input type="reset" name="borrar" id="borrar" value="Reestablecer">
+					</td>
+				</tr>
+			</table>
+			
+
+
+			
+		</fieldset>
+	</form>
+</body>
+</html>
