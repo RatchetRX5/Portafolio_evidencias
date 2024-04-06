@@ -1,0 +1,49 @@
+.texto{
+	text-align: center;
+	font-size: 30px;
+	padding: 30px;
+
+}
+
+div{
+	background-color: orange;
+	border-radius: 25px;
+	border: none;
+	width: 300px;
+	margin: 10% 40% 10% 40%;
+}
+a{	
+	color: white;
+	text-decoration: none;
+}
+
+div:hover{
+	background-color: #CDFF01;
+	border-radius: 25px;
+	border: none;
+	width: 300px;
+	margin: 10% 40% 10% 40%;
+	transform: skew(-25deg);
+	-moz-transform: skew(-25deg);
+	-webkit-transform: skew(-25deg);
+}
+
+div a:hover{
+	width: 300px;
+	margin: 10% 40% 10% 40%;
+	color: gray;
+}
+
+div:active{
+	background-color: #00D70D;
+	border-radius: 25px;
+	border: none;
+	width: 300px;
+	margin: 10% 40% 10% 40%;
+	transform: skew(-25deg);
+	-moz-transform: skew(-25deg);
+	-webkit-transform: skew(-25deg);
+	box-shadow: grey 20px 20px ;
+	-moz-box-shadow: grey 20px 20px;
+	-webkit-box-shadow: grey 20px 20px ;
+}
