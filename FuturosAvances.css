@@ -1,0 +1,74 @@
+@font-face{
+    font-family: Truculenta;
+    src: url("fuentes/Truculenta/Truculenta-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: Lato;
+    src: url("fuentes/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+#tituloP{
+    font-family: Truculenta;
+    font-size: 42px;
+    text-align: center;
+    background-color: #49F35F;
+    border-radius: 10px;
+}
+
+.lista_ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+a{
+    
+    text-decoration: none;
+        color: white;
+        font-style: italic;
+        text-align: center;
+
+}
+
+a li:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #43C253;
+        font-style: italic;
+}
+
+.menu{
+    float: left;
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+    background-color: #00984E;
+    width: 23.3%;
+    box-sizing: content-box;
+    font-style: italic;
+}
+div{
+    background-color: rgb(17, 59, 4);
+}
+
+body{
+    background-color: lightgreen;
+}
+
+p{
+    color: white;
+}
+
+h2{
+    display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+ul{
+    color:white;
+}
+

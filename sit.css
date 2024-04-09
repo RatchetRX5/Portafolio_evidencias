@@ -1,0 +1,104 @@
+@font-face{
+	font-family: Truculenta;
+	src: url("fuentes/Truculenta/Truculenta-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: Lato;
+	src: url("fuentes/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+#tituloP{
+	font-family: Truculenta;
+	font-size: 42px;
+	text-align: center;
+	background-color: #49F35F;
+	border-radius: 10px;
+}
+
+p{
+	font-size: 18px;
+	font-family: Lato;
+}
+
+
+
+h2{
+	font-family: Lato; 
+}
+
+body{
+	background-image: url("imagenes/fondo2G.jpg");
+	
+}
+
+li{
+	font-family: Lato; 
+}
+
+h1{
+	text-align: center;
+}
+p{
+	font-family: Lato
+}
+
+.lista_ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+a{
+	
+	text-decoration: none;
+		color: white;
+		font-style: italic;
+		text-align: center;
+
+}
+
+a li:hover{
+		text-decoration: none;
+		color: white;
+		background-color: #43C253;
+		font-style: italic;
+}
+
+.menu{
+	float: left;
+	margin: 1px;
+	padding: 10px;
+	text-align: center;
+	background-color: #00984E;
+	width: 23.3%;
+	box-sizing: content-box;
+	font-style: italic;
+}
+.intro{
+	background-color: #B4DBB9 ;
+	height: 800px;
+	width: 100%;
+	padding:0;
+	margin: 0;
+	align-content: center;
+}
+.puntos{
+	list-style-type: circle;
+}
+
+.info{
+	background-color: #99EAB7;
+	border: solid 6px;
+	border-color:#519E6D #4EC479 ;
+}
+
+.img1{
+	height: 300px;
+	width: 80%;
+	margin: 20px;
+	margin-left: 150px;
+	border: solid 3px #43C253;
+}
