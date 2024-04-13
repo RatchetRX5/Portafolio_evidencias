@@ -1,0 +1,13 @@
+#principal{
+	text-align: center;
+	border: solid red 3px;
+	background-color: lightblue;
+	margin: 200px;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+input{
+	border-radius: 3px;
+}
+
