@@ -1,0 +1,27 @@
+div{
+	background-color: lightgray;
+	border-radius: 5px;
+}
+
+.in{
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
+	width: 97%;
+	box-align: center;
+	box-sizing: content-box;
+}
+
+#sub{
+	background-color: #E87A7A ;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	width: 97%;
+	margin: 5px;
+	box-align: center;
+	box-sizing: content-box;
+}
