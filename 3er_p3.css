@@ -1,0 +1,28 @@
+#formu{
+	width: 710px;
+	
+}
+
+input{
+	width: 700px;
+	margin-top: 10px;
+	padding: 12px;
+	box-sizing: content-box;
+	border-radius: 5px;
+	border-color: red;
+}
+
+#sub{
+	width: 700px;
+	background-color: #00D8FF;
+	border: none;
+	border-radius: 5px;
+}
+
+#sub:hover{
+	background-color: #A4E5F1 ;
+}
+
+#sub:active{
+	background-color: #00D8FF;
+}

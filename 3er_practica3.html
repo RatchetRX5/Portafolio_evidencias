@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="3er_p3.css">
+	<script type="text/javascript" src="3er_p3.js"></script>
+	<title>Práctica 3 Javascript</title>
+</head>
+<body>
+	<h2>Funciones reservadas parte 2: RFC</h2>
+	<h3>Práctica 3</h3>
+	<form name="formu" id="formu">
+		<label for="cadena">Escribe tu nombre</label>
+		<br/>
+		<input type="text" id="name" name="nombre" placeholder="Nombre">
+		<br/>
+		<label for="cadena2">Escribe tu apellido paterno</label>
+		<br/>
+		<input type="text" id="apa" name="ap" placeholder="Apellido paterno">
+		<br/>
+		<label for="cadena2">Escribe tu apellido materno</label>
+		<br/>
+		<input type="text" id="ama" name="am" placeholder="Apellido materno">
+		<br/>
+		<label for="cadena2">Escribe tu año de nacimiento</label>
+		<br/>
+		<input type="text" id="yr" name="anio" placeholder="YYYY">
+		<br/>
+		<label for="cadena2">Escribe tu mes de nacimiento</label>
+		<br/>
+		<input type="text" id="mnth" name="mes" placeholder="MM">
+		<br/>
+		<label for="cadena2">Escribe tu dia de nacimiento</label>
+		<br/>
+		<input type="text" id="day" name="dia" placeholder="DD">
+		<br/>
+		<label for="resultado">Resultado</label>
+		<br/>
+		<input type="text" id="resul" name="resultado" >
+		<br/>
+	</form>
+	<br/>
+	<input id="sub" type="submit" value="Generar el RFC" onclick="genera_rfc()">
+</body>
+</html>
