@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="totales.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==100)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if (total==80)
+        	document.getElementById("comentario").innerHTML="Muy bien!!";
+        else
+        	if(total==60)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=40)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "100 puntos. Excelente. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "80 puntos. Muy bien. \r Obtuviste 8 preguntas correctas");
+doc.text(20, 90, "60 puntos. Regular. \r Obtuviste 6 preguntas correctas");
+doc.text(20, 110, "40 o menos puntos. Deberias estudiar un poco más. \r Obtuviste 4 o menos preguntas correctas");
+doc.text(20, 130, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1 align="center">Responde la encuesta</h1>
+	<h2 align="center">Tu opinión es importante</h2>
+<div id="cont">
+	<form>
+	<ul>	
+		<li>¿Qué animal esta en el billete de 50 pesos mexicanos actual?</li>
+		<input type="radio" name="r1" id="r1" value="10"/>Un ajolote<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Un elefante<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Una serpiente<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Un águila<br/>
+		
+		<li>¿Cuál es el país más grande del mundo en términos de área?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>China<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Brasil<br/>
+		<input type="radio" name="r2" id="r2" value="10"/>Rusia<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Estados Unidos<br/>
+
+		<li>¿Quién pintó la famosa obra "La Gioconda" también conocida como "La Mona Lisa"?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Michelangelo Buonarroti<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Vincent van Gogh<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Pablo Picasso<br/>
+		<input type="radio" name="r3" id="r3" value="10"/>Leonardo da Vinci<br/>
+
+        <li>¿Cuál es el metal más abundante en la corteza terrestre?</li>
+		<input type="radio" name="r4" id="r4" value="10"/>Hierro<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Plata<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Oro<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Aluminio<br/>
+
+		<li>¿Quién escribió la obra literaria "Don Quijote de la Mancha"?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>Dante Alighieri<br/>
+		<input type="radio" name="r5" id="r5" value="10"/>Miguel de Cervantes<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Homero<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>William Shakespeare<br/>
+
+		<li>¿Cuál es el río más largo del mundo?</li>
+		<input type="radio" name="r6" id="r6" value="0"/>Amazonas<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Yangtsé<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Nilo<br/>
+		<input type="radio" name="r6" id="r6" value="10"/>Amazonas<br/>
+		<li>¿En qué año finalizó la Segunda Guerra Mundial?</li>
+		<input type="radio" name="r7" id="r7" value="10"/> 1945<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>1950<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>1939<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>1942<br/>
+
+		<li>¿Quién fue el primer ser humano en viajar al espacio?</li>
+		<input type="radio" name="r8" id="r8" value="0"/>Neil Armstrong<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Buzz Aldrin1<br/>
+		<input type="radio" name="r8" id="r8" value="10"/>Yuri Gagarin<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>John Glenn<br/>
+		<li>¿Cuál de los siguientes planetas del sistema solar es el más cercano al Sol?</li>
+		<input type="radio" name="r9" id="r9" value="0"/>Júpiter<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Marte<br/>
+		<input type="radio" name="r9" id="r9" value="10"/>Mercurio<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Urano<br/>
+
+		<li>¿Cuál es la capital de Japón?</li>
+		<input type="radio" name="r10" id="r10" value="10"/>Tokio<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Kioto<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Osaka<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Hokkaido<br/>
+	</ul>
+</form>
+</div>
+<input class="botones" type="button" value="Calificar" onclick="califica()">
+<p></p>
+<div class="result">
+	<p id="total">   </p>
+	<p id="comentario">   </p>
+</div>
+
+<input class="botones" type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>

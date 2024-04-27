@@ -1,0 +1,53 @@
+#contiene{
+	background-color: #9C45D8;
+	text-align: center;
+}
+#cont{
+	background-color: #AC6FD7;
+	text-align: left;
+	font-size: 20px;
+	box-sizing: content-box;
+
+}
+
+#result{
+	text-align: center;
+}
+ul{
+	list-style: none;
+	
+}
+input{
+	
+}
+form{
+	border: solid 3px;
+}
+li{
+	text-align: left;
+	background-color: #EE9464 ;
+	width: 90%;
+	font-size: 24px;
+}
+
+.botones{
+	text-align: center;
+}
+
+
+.botones{
+	font-size: 20px;
+	background-color: #7285F1;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	width: 800px;
+}
+.botones:hover{
+	font-size: 20px;
+	background-color: #96A2E3 ;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	width: 800px;
+}
