@@ -1,0 +1,48 @@
+body{
+  background-color: #F04843;
+}
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*
+Todo el apartado de "carousel" compone una funcion diferente
+Siendo solamente la primera clase para que el espacio se adapte al tamaño de la imagen
+El segunddo da el ancho al 100% para que la imagen ocupe toda la caja
+Por ultimo se da una funcion de "active" para que este pueda ser identificado dentro del script
+*/
+.carousel-content {
+  display: flex;
+}
+
+.carousel-content img {
+  width: 100%;
+  display: none;
+}
+
+.carousel-content img.active {
+  display: block;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+
