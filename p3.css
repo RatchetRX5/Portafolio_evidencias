@@ -1,0 +1,37 @@
+body{
+	font-family: verdana, sans-serif;
+	padding: 20px;
+	
+	text-align: center;
+}
+.espacio{
+	width: 100%;
+	background-color: #A0D7E8;
+	align-content: center;
+}
+label{
+	display: inline-block;
+	margin: 20px;
+	font-size: 24px;
+}
+#palabra{
+	display: inline-block;
+	width: 98%;
+	padding: 8px;
+	font-size: 20px;
+	
+}
+
+#sub{
+	width: 20%;
+	padding: 20px;
+	height: 60px;
+	background-color: #FFD500;
+	font-size: 20px;
+}
+
+#sub:hover{
+	background-color: #FEE980;
+	border-style: none;
+	border
+}
