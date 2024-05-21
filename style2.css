@@ -1,0 +1,162 @@
+/*Apartado de fuentes*/
+.inter-<uniquifier> {/*Fuente agregada Inter*/
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.lato-regular {/*Fuente agregada Lato*/
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*----------------------------------------------*/
+body{
+	height: 100vh;
+	background-image: url('imagenes/fondo_inicio.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+#titulo1{
+	display: inline-block;
+	padding: 0px;
+	font-family: Inter;
+	font-size: 40px;
+	text-align: center;
+	background-color: #00984E;
+	width: 100%;
+	text-shadow: 2px -2px 4px;
+}
+
+/*Diseño de barra de navegación*/
+.menu{
+	float: left;
+	margin: 1px;
+	padding: 10px;
+	text-align: center;
+	background-color: #00984E;
+	width: 23.35%;
+	box-sizing: content-box;
+	font-family: Inter;
+	font-style: italic;
+}
+
+.nav{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.anav{
+	text-decoration: none;
+	color: white;
+	font-style: italic;
+	text-align: center;
+}
+
+.anav li:hover{
+	text-decoration: none;
+	color: white;
+	background-color: #43C253;
+	font-style: italic;
+}
+
+/*Divs grandes/padres*/
+.div-1{
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #72DF7C;
+	width: 100%;
+}
+
+/*Divs chicos/hijos*/
+.div-2{
+	font-family: Lato;
+	font-size: 18px;
+	background-color: #ADEDB3;
+	margin: 10px;
+	padding: 10px;
+	width: 50%;
+}
+
+.div-22{
+	font-family: Lato;
+	font-size: 18px;
+	background-color: #ADEDB3;
+	margin: 10px;
+	padding: 10px;
+	width: 50%;
+}
+/*Formatos externos para subtitulos, textos, etc.*/
+.subtis2{
+	text-shadow: 2px -2xp;
+	text-align: center;
+	font-size: 36px;
+	font-family: Lato;
+}
+
+/*Apartado del carousel de imagenes*/
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*El carousel se maneja con contenidos sencillos y un formato que permite que las imagenes se adapten de manera adecuada*/
+.carousel-content {
+  display: flex;
+}
+
+.carousel-content img {
+	height: 400px;
+  width: 100%;
+  display: none;
+}
+
+.carousel-content img.active {
+  display: block;
+}
+/*Asi mismo estan los detalles de cada parte de la pagina y decoracion*/
+/*button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+*/
+
+.footer{
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #00984E;
+	color:white;
+	width: 100%;
+	font-family:Lato;
+	font-size: 20px;
+}
+
+.footer ul{
+	list-style-type: none;
+}
