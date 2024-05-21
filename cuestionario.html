@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Link de fuentes-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+	<!---->
+	<title>Cuestionario diagnostico</title>
+    <link rel="stylesheet" href="style3.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==100)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if (total==80)
+        	document.getElementById("comentario").innerHTML="Muy bien!!";
+        else
+        	if(total==60)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=40)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conocimientos básicos sobre GreenTech");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Puntos obtenidos:"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "100 puntos. Excelente. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "80 puntos. Muy bien. \r Obtuviste 8 preguntas correctas");
+doc.text(20, 90, "60 puntos. Regular. \r Obtuviste 6 preguntas correctas");
+doc.text(20, 110, "40 o menos puntos. Deberias estudiar un poco más. \r Obtuviste 4 o menos preguntas correctas");
+doc.text(20, 130, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+	<div id="titulo1">
+		<p>
+			GREEN TECH
+		</p>
+	</div>
+
+	<ul class="nav">
+			<a href="principal.html" class="anav"><li class="menu">¿QUÉ SON?</li></a> 
+			<a href="galeria.html" class="anav"><li class="menu">GALERÍA</li></a> 
+			<a href="contacto.html" class="anav"><li class="menu">CONTACTANOS</li></a> 
+			<a href="ayuda.html" class="anav"><li class="menu">AYUDA</li></a> 
+	</ul>
+    <div id="contiene">
+	<div id="cont">
+	<div class="div-1">
+		
+	
+	<form>
+	<ul>	
+		<li>¿Qué es la energía solar?</li>
+		<input type="radio" name="r1" id="r1" value="10"/>Energía obtenida a partir de la radiación del sol<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Energía generada por el viento<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Energía obtenida de la combustión de fósiles<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Energía producida por el agua en movimiento<br/>
+		
+		<li>¿Cuál de los siguientes es un beneficio de las energías renovables?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Incrementan la dependencia del petróleo<br/>
+		<input type="radio" name="r2" id="r2" value="0"/> Emiten gases de efecto invernadero<br/>
+		<input type="radio" name="r2" id="r2" value="10"/>Son inagotables y no contaminantes<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Generan residuos nucleares<br/>
+
+		<li>¿Qué es la energía eólica?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Energía generada por el movimiento del agua<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Energía producida por reacciones nucleares<br/>
+		<input type="radio" name="r3" id="r3" value="0"/> Energía derivada de la biomasa<br/>
+		<input type="radio" name="r3" id="r3" value="10"/> Energía obtenida del viento<br/>
+
+        <li>¿Cuál de las siguientes opciones es una fuente de energía renovable?</li>
+		<input type="radio" name="r4" id="r4" value="10"/>Geotérmica<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Petróleo<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Gas natural<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Carbón<br/>
+
+		<li>¿Qué es la tecnología verde (Green Tech)?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>Tecnología utilizada exclusivamente en la agricultura<br/>
+		<input type="radio" name="r5" id="r5" value="10"/>Tecnología que mejora la eficiencia y sostenibilidad ambiental<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Tecnología que aumenta la producción de energía no renovable<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Tecnología destinada a la fabricación de plásticos<br/>
+
+		<li>¿Cuál es la principal desventaja de la energía solar?</li>
+		<input type="radio" name="r6" id="r6" value="0"/>No se puede almacenar<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Produce altos niveles de contaminación<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>Es más cara que la energía fósil<br/>
+		<input type="radio" name="r6" id="r6" value="10"/>Depende de la disponibilidad de luz solar<br/>
+		<li>¿Qué país es el mayor productor de energía eólica en el mundo?</li>
+		<input type="radio" name="r7" id="r7" value="10"/>China<br/>
+		<input type="radio" name="r7" id="r7" value="0"/> India<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>Estados Unidos<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>Alemania<br/>
+
+		<li>¿Cuál de los siguientes no es un tipo de energía renovable?</li>
+		<input type="radio" name="r8" id="r8" value="0"/>Biomasa<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Hidráulica1<br/>
+		<input type="radio" name="r8" id="r8" value="10"/>Nuclear<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Solar<br/>
+		<li>¿Qué es la energía hidráulica?</li>
+		<input type="radio" name="r9" id="r9" value="0"/> Energía generada por el viento<br/>
+		<input type="radio" name="r9" id="r9" value="0"/> Energía obtenida de la radiación del sol<br/>
+		<input type="radio" name="r9" id="r9" value="10"/> Energía producida por el movimiento del agua<br/>
+		<input type="radio" name="r9" id="r9" value="0"/> Energía derivada de residuos orgánicos<br/>
+
+		<li>¿Cuál es uno de los principales desafíos para la adopción de tecnologías verdes?</li>
+		<input type="radio" name="r10" id="r10" value="10"/>Baja eficiencia energética<br/>
+		<input type="radio" name="r10" id="r10" value="0"/> Falta de conciencia y educación<br/>
+		<input type="radio" name="r10" id="r10" value="0"/> Emisión de gases de efecto invernadero<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Producción de residuos tóxicos<br/>
+	</ul>
+</form>
+</div>
+</div>
+<input class="botones" type="button" value="Calificar" onclick="califica()">
+<p></p>
+<div class="result">
+	<p id="total">   </p>
+	<p id="comentario">   </p>
+</div>
+
+<input class="botones" type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
