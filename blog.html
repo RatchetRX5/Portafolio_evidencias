@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Link de fuentes-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+	<!---->
+	<title>Comentarios</title>
+	<link rel="stylesheet" href="style3.css">
+	
+</head>
+<body>
+	<div id="titulo1">
+		<p>
+			GREEN TECH
+		</p>
+	</div>
+
+	<ul class="nav">
+			<a href="principal.html" class="anav"><li class="menu">¿QUÉ SON?</li></a> 
+			<a href="galeria.html" class="anav"><li class="menu">GALERÍA</li></a> 
+			<a href="contacto.html" class="anav"><li class="menu">CONTACTANOS</li></a> 
+			<a href="ayuda.html" class="anav"><li class="menu">AYUDA</li></a> 
+	</ul>
+	<div class="div-1">
+		
+	
+		<form name="formulario" >
+			<div class="div-2">
+				<label for="clave">Usuario:</label>
+				<br>
+				<input type="text" name="clave" id="clave">
+				<label for="text">Comentario:</label>
+				<br>
+				<textarea name="text" id="texto"></textarea>
+			</div>
+			<div class="div-2">
+				<input type="button" name="grabar" id="grabar" value="Comentar" onclick="iniciar()">
+				<br>
+				<input type="button" name="eliminar" id="eliminar" value="Borrar Comentarios" onclick="elimina()">
+			</div>
+		</form>
+
+		<div id="cajaDatos">
+			Aún no registras información
+		</div>
+	</div>
+	
+	<script src="script3_blog.js"></script>
+</body>
+</html>
